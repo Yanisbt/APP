@@ -20,6 +20,7 @@ def filtre(date,produit,prix,qtite):
         #Ajouter des instructions
     elif filtrage=="produit":
         print(produit)
+        #Ajouter des instructions
     elif filtrage=="prix":
         print(vente_prix)
         #Ajouter des instructions
