@@ -9,3 +9,4 @@ print(lire(donnees,"PME.csv"))
         
 def filtres(fichier):
     
+#pierre est et sera toujours un fils de pute 
