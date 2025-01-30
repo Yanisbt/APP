@@ -1,11 +1,14 @@
 donnees={"Order ID":[],"Product":[],"Quantity Ordered":[],"Price Each":[],"Order Date":[],"Purchase Address":[]}
-def lire(donnees,fichier):
+def charger(donnees,fichier):
     with open(fichier,"w") as f:
         for keys in donnees.keys():
             f.write(f"{keys}\n")
     affichage = print(fichier)
     return affichage
-print(lire(donnees,"PME.csv"))
+print(charger(donnees,"PME.csv"))
         
-def filtres(fichier):
 
+date=input("Entrez une date en str")
+produit= input("Entrez un produit en str")
+vente_prix=tuple.int("Entrez un minimum et un maximum pour le prix")
+vente_qtite=tuple.int("Entrez un minimum et un maximum pour la quantité")
