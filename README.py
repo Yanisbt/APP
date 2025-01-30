@@ -1,4 +1,4 @@
-donnees={"Order ID":"","Product":"","Quantity Ordered":"","Price Each":"","Order Date":"","Purchase Address":""}
+donnees={"Order ID":[],"Product":[],"Quantity Ordered":[],"Price Each":[],"Order Date":[],"Purchase Address":[]}
 def lire(donnees,fichier):
     with open(fichier,"w") as f:
         for keys in donnees.keys():
@@ -7,3 +7,5 @@ def lire(donnees,fichier):
     return affichage
 print(lire(donnees,"PME.csv"))
         
+def filtres(fichier):
+    
