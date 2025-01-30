@@ -6,3 +6,4 @@ def lire(donnees,fichier):
     affichage = print(fichier)
     return affichage
 print(lire(donnees,"PME.csv"))
+def organiser(donnees,fichier):
