@@ -1,0 +1,7 @@
+On a choisi en premier lieu d'importer le fichier .csv, ce qui va nous permettre de continuer le projet.
+Ensuite, on définie toutes les fonctions avec les variables qui correspondent, elles contiennent toutes la variable "fichier", qui fait rentrer notre fichier .csv dans les fonctions. 
+Enfin, on a réaliser le menu de l'ESME market, qui compile toutes les fonctions, et qui permet donc de faire toutes les recerches par filtres demandées, ou d'ajouter/modifier des ventes.
+
+Pour faciliter la conception du projet, nous avons importé les librairies csv, os, et pandas, qui permettent de manipuler les données issues d'un .csv, de se diriger dans les dossiers, et d'analyser les données du .csv.
+
+Les difficultés rencontrées étaient pricipalement la compréhension de la manipulation et de l'analyse des données du fichier .csv, ainsi que la mise en commun du travail du groupe, en raison d'une différence de niveau en programmation python.
