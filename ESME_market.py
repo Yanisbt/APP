@@ -1,7 +1,8 @@
-import csv
-import os
-import pandas as pd
+import csv # pour manipuler les données du .csv
+import os # pour se diriger dans les dossiers
+import pandas as pd # permet d'analyser les données
 
+# on importe le fichier
 fichier = "C:/Users/Yanis ESME/Desktop/ESME/APP/APP/Sales_April_2019.csv"
 df = pd.read_csv(fichier, sep=",", quotechar='"', engine="python", on_bad_lines='skip', header=0)
 
@@ -9,7 +10,7 @@ print(df.head())  # Vérifie les premières lignes
 print(df.columns)  # Vérifie si toutes les colonnes sont bien détectées
 
 
-# Charger les données du fichier csv
+# fonction qui charge les données du fichier csv
 def charger_donnees(fichier):
     try:
         df = pd.read_csv(fichier, sep=",", quotechar='"', engine="python", on_bad_lines='skip')
@@ -18,34 +19,35 @@ def charger_donnees(fichier):
     except FileNotFoundError:
         print("Fichier non trouvé.")
         return None
-# Filtrer les ventes par date
+    
+# fonction qui filtre les ventes par date
 def filtrer_par_date(df, date):
-    date = pd.to_datetime(date, errors='coerce')  # Convertir la date entrée
-    return df[df['Order Date'].dt.date == date.date()]  # Comparer correctement
+    date = pd.to_datetime(date, errors='coerce')  
+    return df[df['Order Date'].dt.date == date.date()]  
 
-# Filtrer les ventes par produit
+# fonction qui filtre les ventes par produit
 def filtrer_par_produit(df, produit):
-    return df[df['Product'].str.strip().str.lower() == produit.strip().lower()]  # Ignorer espaces et majuscules
+    return df[df['Product'].str.strip().str.lower() == produit.strip().lower()]  # pour ignorer les espaces et les majuscules
 
-# Ajouter une vente
+# fonction qui ajoute une vente
 def ajouter_vente(df, nouvelle_vente, fichier):
     df = df.append(nouvelle_vente, ignore_index=True)
     df.to_csv(fichier, index=False)
     print("Nouvelle vente ajoutée !")
 
-# Modifier une vente
+# fonction qui modifie une vente
 def modifier_vente(df, order_id, nouvelle_quantite, nouveau_prix, fichier):
     df.loc[df['Order ID'].astype(str) == str(order_id), ['Quantity Ordered', 'Price Each']] = [nouvelle_quantite, nouveau_prix]
     df.to_csv(fichier, index=False)
     print("Vente mise à jour !")
 
-# Calculer chiffre d'affaires total
+# fonction qui calcule chiffre d'affaires total
 def calculer_ca_total(df):
     df['Quantity Ordered'] = pd.to_numeric(df['Quantity Ordered'], errors='coerce')
     df["Price Each"] = pd.to_numeric(df["Price Each"], errors='coerce')
     return (df['Quantity Ordered'] * df['Price Each']).sum()
 
-# Menu principal
+# le menu principal
 def menu():
     df = charger_donnees(fichier)
     if df is None:
