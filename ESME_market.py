@@ -62,17 +62,17 @@ def menu():
         choix = input("Choisissez une option : ")
         
         if choix == '1':
-            date = input("Entrez la date (MM/JJ/YYYY) : ")
+            date = input("Entrez la date (MM/JJ/YY Heure:Minutes) : ")
             print(filtrer_par_date(df, date))
         elif choix == '2':
             produit = input("Entrez le produit : ")
             print(filtrer_par_produit(df, produit))
         elif choix == '3':
-            order_id = input("Order ID : ")
+            order_id = input("Order ID : XXXXXX ")
             produit = input("Produit : ")
             quantite = int(input("Quantité : "))
             prix = float(input("Prix : "))
-            date = input("Date (MM/JJ/YYYY) : ")
+            date = input("Date (MM/JJ/YY Heure : Minutes) : ")
             adresse = input("Adresse d'achat : ")
             nouvelle_vente = {'Order ID': order_id, 'Product': produit, 'Quantity Ordered': quantite, 'Price Each': prix, 'Order Date': date, 'Purchase Address': adresse}
             ajouter_vente(df, nouvelle_vente, fichier)
