@@ -3,7 +3,7 @@ import os # pour se diriger dans les dossiers
 import pandas as pd # permet d'analyser les données
 
 # on importe le fichier
-fichier = "C:/Users/Yanis ESME/Desktop/ESME/APP/APP/Sales_April_2019.csv"
+fichier = "Sales_April_2019.csv"
 df = pd.read_csv(fichier, sep=",", quotechar='"', engine="python", on_bad_lines='skip', header=0)
 
 print(df.head())  # Vérifie les premières lignes
