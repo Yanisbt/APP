@@ -4,5 +4,6 @@ Enfin, on a réaliser le menu de l'ESME market, qui compile toutes les fonctions
 
 Pour faciliter la conception du projet, nous avons importé les librairies csv, os, et pandas, qui permettent de manipuler les données issues d'un .csv, de se diriger dans les dossiers, et d'analyser les données du .csv.
 
-Les difficultés rencontrées étaient pricipalement la compréhension de la manipulation et de l'analyse des données du fichier .csv, ainsi que la mise en commun du travail du groupe, en raison d'une différence de niveau en programmation python.
-Nous avons utilisé l'intelligence artificielle pour corriger des erreurs de programmation et pour nous éclairer sur les différentes fonctions issues des librairies importées.
+Les difficultés rencontrées étaient principalement la compréhension de la manipulation et de l'analyse des données du fichier .csv, ainsi que la mise en commun du travail du groupe, en raison d'une différence de niveau en programmation python.
+Nous avons utilisé l'intelligence artificielle pour corriger des erreurs de programmation et pour nous éclairer sur les différentes fonctions issues des librairies importées, mais à l'origine, nous avons décidé nous-même de la mise en page du programme, et dans quel ordre utiliser les fonctions.
+On pensait avoir fini alors on s'est permit de jouer à cemantix plutôt que d'affiner le code.
